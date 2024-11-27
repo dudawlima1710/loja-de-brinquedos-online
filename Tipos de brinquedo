@@ -1,0 +1,41 @@
+class Brinquedo: 
+    def __init__(self,  nome,  categoria,  preco,  idade_recomendada,  estoque): 
+        self.nome = nome
+        self.categoria = categoria
+        self.preco = preco
+        self.idade_recomendada = idade_recomendada
+        self.estoque = estoque
+
+    def exibir_detalhes(self): 
+        return f"{self.nome}\n{self.categoria}\nR${self.preco:.2f}\n{self.idade_recomendada} anos ou mais\n{self.estoque} unidades\n"
+
+
+class LojaBrinquedos: 
+    def __init__(self): 
+        self.brinquedos = []
+
+    def adicionar_brinquedo(self,  nome,  categoria,  preco,  idade_recomendada,  estoque): 
+        novo_brinquedo = Brinquedo(nome,  categoria,  preco,  idade_recomendada,  estoque)
+        self.brinquedos.append(novo_brinquedo)
+        print(f"Brinquedo '{nome}' adicionado com sucesso!")
+
+    def listar_brinquedos(self): 
+        if not self.brinquedos: 
+            print("Nenhum brinquedo disponível no momento.")
+            return
+        print("\nBrinquedos Disponâneis: ")
+        for brinquedo in self.brinquedos: 
+            print(brinquedo.exibir_detalhes())
+
+
+# Exemplo de uso
+loja = LojaBrinquedos()
+
+# Adicionando brinquedos à loja
+loja.adicionar_brinquedo("Boneca Fashion",  "Bonecas",  59.90,  3,  10)
+loja.adicionar_brinquedo("Carrinho de Controle Remoto",  "Carrinhos",  120.00,  8,  5)
+loja.adicionar_brinquedo("Jogo de Tabuleiro",  "Jogos",  89.50,  6,  7)
+loja.adicionar_brinquedo("Lego Star Wars",  "Blocos de Montar",  250.00,  10,  3)
+
+# Listando brinquedos disponâneis
+loja.listar_brinquedos()
