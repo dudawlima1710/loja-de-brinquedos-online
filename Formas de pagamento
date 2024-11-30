@@ -1,0 +1,63 @@
+class LojaBrinquedos: 
+    def __init__(self,  nome): 
+        self.nome = nome
+        self.produtos = {
+            'Bola de Futebol':  45.00, 
+            'Boneca':  80.00, 
+            'Carrinho de Controle Remoto':  150.00, 
+            'Quebra-Cabeça':  30.00, 
+            'Play-Doh':  25.00, 
+            'Pião':  15.00
+        }
+    
+    def mostrar_produtos(self): 
+        print(f"\nBem-vindo à {self.nome}!")
+        print("Aqui estão nossos brinquedos e preços: ")
+        for produto,  preco in self.produtos.items(): 
+            print(f"{produto}:  R${preco: .2f}")
+    
+    def calcular_total(self,  itens): 
+        return sum(self.produtos[produto] for produto in itens)
+    
+    def escolher_pagamento(self,  total): 
+        print("\nEscolha a forma de pagamento: ")
+        print("1 - Cartão de Crédito")
+        print("2 - Boleto Bancário")
+        print("3 - PIX")
+        escolha = input("Digite o número da forma de pagamento escolhida:  ")
+
+        if escolha == '1': 
+            print(f"\nPagamento no Cartão de Crédito no valor de R${total: .2f} foi aprovado!")
+        elif escolha == '2': 
+            print(f"\nBoleto gerado com sucesso no valor de R${total: .2f}. O pagamento pode ser feito em até 3 dias úteis.")
+        elif escolha == '3': 
+            print(f"\nPagamento via PIX no valor de R${total: .2f} foi realizado com sucesso!")
+        else: 
+            print("\nForma de pagamento inválida! Tente novamente.")
+            return self.escolher_pagamento(total)
+
+
+# Função principal
+def main(): 
+    loja = LojaBrinquedos("Loja de Brinquedos Encantados")
+    loja.mostrar_produtos()
+    
+    # O usuário escolhe os produtos
+    itens_escolhidos = []
+    while True: 
+        produto = input("\nEscolha um brinquedo para adicionar ao carrinho (ou digite 'sair' para finalizar):  ")
+        if produto.lower() == 'sair': 
+            break
+        if produto in loja.produtos: 
+            itens_escolhidos.append(produto)
+            print(f"{produto} foi adicionado ao carrinho.")
+        else: 
+            print("Brinquedo não encontrado. Tente novamente.")
+    
+    if not itens_escolhidos: 
+        print("\nNenhum brinquedo foi adicionado ao carrinho. Finalizando o programa.")
+        return
+    
+    # Calculando o total
+    total = loja.calcular_total(itens_escolhidos)
+    loja.escolher_pagamento(total)
