@@ -1,0 +1,41 @@
+class LojaBrinquedosOnline:
+    def __init__(self, nome):
+        self.nome = nome
+        # Definindo dias e horários de funcionamento
+        self.horarios = {
+            'segunda': '08:00 - 18:00',
+            'terça': '08:00 - 18:00',
+            'quarta': '08:00 - 18:00',
+            'quinta': '08:00 - 18:00',
+            'sexta': '08:00 - 18:00',
+            'sábado': '09:00 - 14:00',
+            'domingo': 'Fechado'
+        }
+    
+    def mostrar_horarios(self):
+        print(f"\nHorários de Funcionamento da {self.nome}:")
+        for dia, horario in self.horarios.items():
+            print(f"{dia.capitalize()}: {horario}")
+
+    def verificar_funcionamento(self, dia_atual):
+        dia_atual = dia_atual.lower()
+        if dia_atual in self.horarios:
+            print(f"\nA loja está funcionando na {dia_atual.capitalize()} de {self.horarios[dia_atual]}.")
+        else:
+            print("\nDia inválido. Por favor, digite um dia da semana corretamente.")
+
+# Função principal
+def main():
+    loja = LojaBrinquedosOnline("Loja de Brinquedos Online Encantados")
+    
+    # Exibe os horários de funcionamento
+    loja.mostrar_horarios()
+    
+    # Pergunta ao usuário sobre o dia em que ele quer saber se a loja está aberta
+    dia_atual = input("\nDigite o dia da semana para verificar se a loja está aberta: ")
+
+    # Verifica se a loja está aberta no dia fornecido
+    loja.verificar_funcionamento(dia_atual)
+
+if __name__ == "__main__":
+    main()
