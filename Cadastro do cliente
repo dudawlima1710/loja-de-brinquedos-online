@@ -1,0 +1,51 @@
+class Cliente:
+    def __init__(self, nome, email, telefone, endereco):
+        self.nome = nome
+        self.email = email
+        self.telefone = telefone
+        self.endereco = endereco
+
+    def __str__(self):
+        return f"{self.nome}, {self.email}, {self.telefone}, {self.endereco}"
+
+
+class CadastroClientes:
+    def __init__(self):
+        self.clientes = []
+
+    def cadastrar_cliente(self):
+        nome = input("Nome do cliente: ")
+        email = input("Email do cliente: ")
+        telefone = input("Telefone do cliente: ")
+        endereco = input("Endereço do cliente: ")
+        cliente = Cliente(nome, email, telefone, endereco)
+        self.clientes.append(cliente)
+        print(f"Cliente {cliente.nome} cadastrado com sucesso!")
+
+    def listar_clientes(self):
+        print("Clientes Cadastrados: ")
+        for cliente in self.clientes:
+            print(cliente)
+
+
+def main():
+    cadastro = CadastroClientes()
+    while True:
+        print("--- Menu de Cadastro de Clientes ---")
+        print("1. Cadastrar novo cliente")
+        print("2. Listar clientes cadastrados")
+        print("3. Sair")
+        opcao = int(input("Escolha uma opção: "))
+        if opcao == 1:
+            cadastro.cadastrar_cliente()
+        elif opcao == 2:
+            cadastro.listar_clientes()
+        elif opcao == 3:
+            print("Saindo... Até logo!")
+            break
+        else:
+            print("Opção inválida!")
+
+
+if __name__ == "__main__":
+    main()
