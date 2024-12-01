@@ -1,7 +1,7 @@
 Criação da Loja
 A criação da loja foi planejada para ser intuitiva e fácil de usar. O layout foi desenvolvido para destacar os produtos, com uma navegação simples e menus organizados, facilitando a busca pelos brinquedos. O design responsivo garante que o site funcione bem em dispositivos móveis e desktop. A loja inclui categorias como brinquedos educativos, bonecas, brinquedos de construção, jogos de tabuleiro e brinquedos eletrônicos. Cada produto tem uma página dedicada com informações detalhadas, imagens de alta qualidade e avaliações de clientes, proporcionando uma experiência de compra completa.
 
-Tipos de Brinquedos
+Tipos de Brinquedos 
 A loja oferece uma vasta gama de brinquedos, que incluem:
 
 Brinquedos Educativos: Focados no desenvolvimento cognitivo e motor das crianças, como quebra-cabeças, jogos de memória e brinquedos que estimulam a criatividade.
