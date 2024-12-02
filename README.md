@@ -4,7 +4,7 @@ A "Sonhos Infantis" é uma loja virtual especializada em brinquedos educativos e
 
 *Cadastro de Clientes*
 
-1. Acesse nosso site ((link unavailable)).
+1. Acesse nosso site ((www.sonhosinfantis.com)).
 2. Clique em "Cadastrar" e preencha os dados necessários (nome, e-mail, senha, endereço e telefone).
 3. Valide seu cadastro através do e-mail recebido.
 4. Acesse sua conta para acompanhar pedidos, histórico de compras e exclusivas promoções.
@@ -43,7 +43,7 @@ A "Sonhos Infantis" é uma loja virtual especializada em brinquedos educativos e
 
 *Contato*
 
-- E-mail: mailto:atendimento@gmail.com
+- E-mail:atendimento@gmail.com
 - Telefone: (11) 1234-5678
 - Instagram: @sonhoinfantis
 - Facebook: @sonhoinfantisoficial
