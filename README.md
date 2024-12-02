@@ -43,7 +43,7 @@ A "Sonhos Infantis" é uma loja virtual especializada em brinquedos educativos e
 
 *Contato*
 
-- E-mail: mailto:atendimento@(link unavailable)
+- E-mail: mailto:atendimento@gmail.com
 - Telefone: (11) 1234-5678
 - Instagram: @sonhoinfantis
 - Facebook: @sonhoinfantisoficial
